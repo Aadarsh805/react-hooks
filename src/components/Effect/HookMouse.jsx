@@ -5,7 +5,6 @@ const HookMouse = () => {
     const[y,setY] = useState(0)
 
     const logMousePosition = (e) => {
-        console.log('adfa')
         setX(e.clientX)
         setY(e.clientY)
     }
@@ -14,7 +13,6 @@ const HookMouse = () => {
         window.addEventListener('mousemove', logMousePosition)
 
         return () => {
-            console.log('remove')
             window.removeEventListener('mousemove', logMousePosition)
         }
     },[])
